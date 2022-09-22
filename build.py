@@ -90,9 +90,9 @@ DYNAMIC_PYTHON_LIBRARY_REGEX = """
 """
 
 JDTLS_MILESTONE = '1.6.0'
-JDTLS_BUILD_STAMP = '202110200520'
+JDTLS_BUILD_STAMP = '202111261512'
 JDTLS_SHA256 = (
-  '09650af5c9dc39f0b40981bcdaa2170cbbc5bb003ac90cdb07fbb57381ac47b2'
+  '683520f0ad251ea0971815de8f9cac83b7c744a2ef3deda64b92c437b95cd698'
 )
 
 RUST_TOOLCHAIN = 'nightly-2022-08-17'
@@ -1075,7 +1075,8 @@ def EnableJavaCompleter( switches ):
   REPOSITORY = p.join( TARGET, 'repository' )
   CACHE = p.join( TARGET, 'cache' )
 
-  JDTLS_SERVER_URL_FORMAT = ( 'http://download.eclipse.org/jdtls/snapshots/'
+  JDTLS_SERVER_URL_FORMAT = ( 'http://download.eclipse.org/jdtls/milestones/'
+                              '{jdtls_milestone}/'
                               '{jdtls_package_name}' )
   JDTLS_PACKAGE_NAME_FORMAT = ( 'jdt-language-server-{jdtls_milestone}-'
                                 '{jdtls_build_stamp}.tar.gz' )
@@ -1330,4 +1331,3 @@ def Main(): # noqa: C901
 
 
 if __name__ == '__main__':
-  Main()
